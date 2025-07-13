@@ -1,0 +1,90 @@
+/* ———  PALETA ——— */
+:root{
+  --rosa‑claro:#f8bbd0;     /* cuadro disponible       */
+  --rosa‑oscuro:#ec407a;    /* cuadro aprobado         */
+  --rosa‑fondo:#fff1f6;     /* fondo general           */
+  --gris‑lock:#e0e0e0;      /* cuadro bloqueado        */
+  --texto:#333;
+  --trans:all .25s ease;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+/* ———  LAYOUT GENERAL ——— */
+body{
+  margin:0;
+  background:var(--rosa‑fondo);
+  color:var(--texto);
+  padding:20px;
+}
+h1{
+  text-align:center;
+  margin-top:0;
+}
+#btn‑reset{
+  display:block;
+  margin:0 auto 20px;
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:var(--rosa‑oscuro);
+  color:#fff;
+  cursor:pointer;
+}
+#btn‑reset:hover{filter:brightness(1.1);}
+
+/* ———  GRID DE SEMESTRES ——— */
+.semestre{
+  margin:30px 0;
+}
+.semestre h2{
+  margin:0 0 10px;
+  padding:8px 12px;
+  background:var(--rosa‑oscuro);
+  color:#fff;
+  border-radius:6px;
+}
+.cursos{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:10px;
+}
+
+/* ———  CUADROS DE RAMOS ——— */
+.curso{
+  padding:12px;
+  background:var(--rosa‑claro);
+  border-radius:8px;
+  cursor:pointer;
+  position:relative;
+  transition:var(--trans);
+  min-height:70px;
+}
+.curso.bloqueado{
+  background:var(--gris‑lock);
+  cursor:not-allowed;
+  opacity:.5;
+  pointer-events:none;
+}
+.curso.aprobado{
+  background:var(--rosa‑oscuro);
+  color:#fff;
+  text-decoration:line-through;
+}
+
+/* — tooltip de prerrequisitos — */
+.curso[data-tip]:hover::after{
+  content:attr(data-tip);
+  position:absolute;
+  left:50%;
+  bottom:110%;
+  transform:translateX(-50%);
+  background:#333;
+  color:#fff;
+  padding:6px 8px;
+  border-radius:4px;
+  white-space:pre-line;
+  font-size:12px;
+  z-index:5;
+  width:180px;
+  text-align:left;
+}
