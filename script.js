@@ -68,7 +68,7 @@ const malla = [
   {id:'ergonomia',                     n:'Ergonomía y Ayudas Técnicas',           sem:'VIII',        year:4, pre:[]},
   {id:'investigacion_to2',            n:'Investigación en TO 2',                 sem:'VIII',        year:4, pre:['investigacion_to1']},
   {id:'bioetica_to',                   n:'Bioética y TO',                         sem:'VIII',        year:4, pre:['TODO_3']},
-  {id:'to_judicial',                   n:'TO en Sistema Judicial',                sem:'VIII',        year:4, pre:['TODO_4']},   // cuarto año aprobado
+  {id:'to_judicial',                   n:'TO en Sistema Judicial',                sem:'VIII',        year:4, pre:['TODO_3']},   // cuarto año aprobado
   {id:'estrategias2',                  n:'Estrategias de Intervención 2',         sem:'VIII',        year:4, pre:['estrategias1']},
   {id:'ocup_med_amb',                  n:'Ocupación y Medio Ambiente',            sem:'VIII',        year:4, pre:[]},
   {id:'cfg7',                          n:'Inglés 6',                              sem:'VIII',        year:4, pre:['cfg6']},
